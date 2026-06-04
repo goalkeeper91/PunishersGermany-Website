@@ -9,6 +9,7 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -55,7 +56,7 @@ class User extends Authenticatable
     /**
      * Ein User gehört zu einem Team.
      */
-    public function team(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function team(): BelongsTo
     {
         return $this->belongsTo(Team::class);
     }

@@ -8,6 +8,7 @@ enum UserRole: string
     case ORGA = 'orga';
     case LEADER = 'leader';
     case COACH = 'coach';
+    case PLAYER = 'player';
     case MEMBER = 'member';
 
     // Ein kleiner Helfer, um schöne Namen im Admin-Dashboard anzuzeigen
@@ -18,6 +19,7 @@ enum UserRole: string
             self::ORGA => 'Orga-Manager',
             self::LEADER => 'Team Leader',
             self::COACH => 'Coach',
+            self::PLAYER => 'Spieler',
             self::MEMBER => 'Member',
         };
     }
